@@ -22,7 +22,11 @@ class Body extends Component {
     let result = [];
     if (missionapplicable.length > 0) {
       missionapplicable.forEach((element) => {
-        result.push(<span className="card-text-value" key={"span-row-" + element}>{element}</span>);
+        result.push(
+          <span className="card-text-value" key={"span-row-" + element}>
+            {element}
+          </span>
+        );
         result.push(<br key={"br-row-" + element} />);
       });
     } else {
@@ -48,7 +52,6 @@ class Body extends Component {
 
   setYear = (eve) => {
     let yearFilter = eve.target.value;
-    console.log(yearFilter);
     this.setState({ yearFilter: yearFilter }, () => {
       this.getFilteredData();
     });
@@ -104,7 +107,6 @@ class Body extends Component {
     const { programList, yearFilter, landFilter, launchFilter } = this.state;
 
     return (
-      //   <div className="container">
       <div className="app-conatiner row">
         <div className="filter col-lg-3">
           <div className="filterCard card">
@@ -548,7 +550,8 @@ class Body extends Component {
                               Successful Launch:
                             </span>
                             <span className="card-text-value">
-                              {row.launch_success !== null && row.launch_success.toString()}
+                              {row.launch_success !== null &&
+                                row.launch_success.toString()}
                             </span>
                           </p>
                           <p className="card-text">
@@ -569,7 +572,6 @@ class Body extends Component {
           </React.Fragment>
         </section>
       </div>
-      //   </div>
     );
   }
 }
