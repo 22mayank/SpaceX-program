@@ -30,6 +30,7 @@ git clone URL
 ```
 2. `cd` into the repository folder
 ```shell
+npm install --save
 npm start
 ```
 
