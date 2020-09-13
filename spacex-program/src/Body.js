@@ -107,480 +107,486 @@ class Body extends Component {
     const { programList, yearFilter, landFilter, launchFilter } = this.state;
 
     return (
-      <div className="app-container row">
-        <div className="filter col-lg-3">
-          <div className="filterCard card">
-            <div className="filterCard-body card-body">
-              <div className="filterHeading">
-                <h5 className="filter-title card-title">Filters</h5>
-                <button
-                  type="button"
-                  className="resetButton btn btn-link"
-                  disabled={
-                    yearFilter === "" &&
-                    launchFilter === "" &&
-                    landFilter === ""
-                      ? true
-                      : false
-                  }
-                  onClick={(e) => {
-                    this.resetFilter();
-                  }}
-                >
-                  Reset Filters
-                </button>
-              </div>
-              <h6 className="card-subtitle">Launch Year</h6>
-              <div className="launchDivider"></div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2006"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2006
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2007"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2007
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2008"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2008
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2009"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2009
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2010"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2010
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2011"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2011
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2012"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2012
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2013"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2013
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2014"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2014
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2015"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2015
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2016"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2016
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2017"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2017
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbar btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2018"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2018
-                  </button>
-                </div>
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="Second group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2019"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2019
-                  </button>
-                </div>
-              </div>
-              <div
-                className="yearToolbarLast btn-toolbar"
-                role="toolbar"
-                aria-label="Toolbar with button groups"
-              >
-                <div
-                  className="btn-group mr-2"
-                  role="group"
-                  aria-label="First group"
-                >
-                  <button
-                    type="button"
-                    className="yearBtn btn btn-success"
-                    value="2020"
-                    onClick={(e) => {
-                      this.setYear(e);
-                    }}
-                  >
-                    2020
-                  </button>
-                </div>
-              </div>
-              <div className="successFilter">
-                <h6 className="card-subtitle">Successful Launch</h6>
-                <div className="launchDivider"></div>
-                <div
-                  className="yearToolbar btn-toolbar"
-                  role="toolbar"
-                  aria-label="Toolbar with button groups"
-                >
-                  <div
-                    className="btn-group mr-2"
-                    role="group"
-                    aria-label="First group"
-                  >
+      <div className="app-container container-fluid">
+        <div class="row">
+          <div className="filter col-lg-3">
+            <div class="container-fluid">
+              <div className="filterCard card">
+                <div className="filterCard-body card-body">
+                  <div className="filterHeading">
+                    <h5 className="filter-title card-title">Filters</h5>
                     <button
                       type="button"
-                      className="yearBtn btn btn-success"
-                      value="true"
+                      className="resetButton btn btn-link"
+                      disabled={
+                        yearFilter === "" &&
+                        launchFilter === "" &&
+                        landFilter === ""
+                          ? true
+                          : false
+                      }
                       onClick={(e) => {
-                        this.setLaunch(e);
+                        this.resetFilter();
                       }}
                     >
-                      True
+                      Reset Filters
                     </button>
+                  </div>
+                  <h6 className="card-subtitle">Launch Year</h6>
+                  <div className="launchDivider"></div>
+                  <div
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2006"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2006
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2007"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2007
+                      </button>
+                    </div>
                   </div>
                   <div
-                    className="btn-group mr-2"
-                    role="group"
-                    aria-label="Second group"
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
                   >
-                    <button
-                      type="button"
-                      className="yearBtn btn btn-success"
-                      value="false"
-                      onClick={(e) => {
-                        this.setLaunch(e);
-                      }}
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
                     >
-                      False
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div className="successFilter">
-                <h6 className="card-subtitle">Successful Landing</h6>
-                <div className="launchDivider"></div>
-                <div
-                  className="yearToolbar btn-toolbar"
-                  role="toolbar"
-                  aria-label="Toolbar with button groups"
-                >
-                  <div
-                    className="btn-group mr-2"
-                    role="group"
-                    aria-label="First group"
-                  >
-                    <button
-                      type="button"
-                      className="yearBtn btn btn-success"
-                      value="true"
-                      onClick={(e) => {
-                        this.setLand(e);
-                      }}
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2008"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2008
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
                     >
-                      True
-                    </button>
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2009"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2009
+                      </button>
+                    </div>
                   </div>
                   <div
-                    className="btn-group mr-2"
-                    role="group"
-                    aria-label="Second group"
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
                   >
-                    <button
-                      type="button"
-                      className="yearBtn btn btn-success"
-                      value="false"
-                      onClick={(e) => {
-                        this.setLand(e);
-                      }}
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
                     >
-                      False
-                    </button>
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2010"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2010
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2011"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2011
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <span className="card-text-label">Selected Filters---</span>
-          </div>
-          <div>
-            <span className="card-text-label">Launch Year:</span>
-            <span className="card-text-value">{yearFilter}</span>
-          </div>
-          <div>
-            <span className="card-text-label">Successful Launch:</span>
-            <span className="card-text-value">{launchFilter}</span>
-          </div>
-          <div>
-            <span className="card-text-label">Successful Land:</span>
-            <span className="card-text-value">{landFilter}</span>
-          </div>
-        </div>
-        <section className="col-lg-9 dataLake-panel-container">
-          <React.Fragment>
-            <div className="row">
-              {programList.length > 0 &&
-                programList.map((row, index) => {
-                  return (
-                    <div className="card-base" key={index}>
-                      <div className="card h-100">
-                        <div className="img-div">
-                          <img
-                            className="card-img-top"
-                            src={row.links.mission_patch_small}
-                            alt="Card cap"
-                          />
-                        </div>
-                        <div className="card-block">
-                          <p className="card-title">
-                            {row.mission_name + " #" + row.flight_number}
-                          </p>
-                          <p className="card-text">
-                            <span className="card-text-label">
-                              Mission Ids:
-                            </span>
-                            {this.displayNames(row.mission_id)}
-                          </p>
-                          <p className="card-text">
-                            <span className="card-text-label">
-                              Launch Year:
-                            </span>
-                            <span className="card-text-value">
-                              {row.launch_year}
-                            </span>
-                          </p>
-                          <p className="card-text">
-                            <span className="card-text-label">
-                              Successful Launch:
-                            </span>
-                            <span className="card-text-value">
-                              {row.launch_success !== null &&
-                                row.launch_success.toString()}
-                            </span>
-                          </p>
-                          <p className="card-text">
-                            <span className="card-text-label">
-                              Successful Landing:
-                            </span>
-                            <span className="card-text-value">
-                              {row.launch_landing &&
-                                row.launch_landing.toString()}
-                            </span>
-                          </p>
-                        </div>
+                  <div
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2012"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2012
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2013"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2013
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2014"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2014
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2015"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2015
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2016"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2016
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2017"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2017
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="yearToolbar btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2018"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2018
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2019"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2019
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    className="yearToolbarLast btn-toolbar"
+                    role="toolbar"
+                    aria-label="Toolbar with button groups"
+                  >
+                    <div
+                      className="btn-group mr-2"
+                      role="group"
+                      aria-label="First group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2020"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2020
+                      </button>
+                    </div>
+                  </div>
+                  <div className="successFilter">
+                    <h6 className="card-subtitle">Successful Launch</h6>
+                    <div className="launchDivider"></div>
+                    <div
+                      className="yearToolbar btn-toolbar"
+                      role="toolbar"
+                      aria-label="Toolbar with button groups"
+                    >
+                      <div
+                        className="btn-group mr-2"
+                        role="group"
+                        aria-label="First group"
+                      >
+                        <button
+                          type="button"
+                          className="yearBtn btn btn-success"
+                          value="true"
+                          onClick={(e) => {
+                            this.setLaunch(e);
+                          }}
+                        >
+                          True
+                        </button>
+                      </div>
+                      <div
+                        className="btn-group mr-2"
+                        role="group"
+                        aria-label="Second group"
+                      >
+                        <button
+                          type="button"
+                          className="yearBtn btn btn-success"
+                          value="false"
+                          onClick={(e) => {
+                            this.setLaunch(e);
+                          }}
+                        >
+                          False
+                        </button>
                       </div>
                     </div>
-                  );
-                })}
+                  </div>
+                  <div className="successFilter">
+                    <h6 className="card-subtitle">Successful Landing</h6>
+                    <div className="launchDivider"></div>
+                    <div
+                      className="yearToolbar btn-toolbar"
+                      role="toolbar"
+                      aria-label="Toolbar with button groups"
+                    >
+                      <div
+                        className="btn-group mr-2"
+                        role="group"
+                        aria-label="First group"
+                      >
+                        <button
+                          type="button"
+                          className="yearBtn btn btn-success"
+                          value="true"
+                          onClick={(e) => {
+                            this.setLand(e);
+                          }}
+                        >
+                          True
+                        </button>
+                      </div>
+                      <div
+                        className="btn-group mr-2"
+                        role="group"
+                        aria-label="Second group"
+                      >
+                        <button
+                          type="button"
+                          className="yearBtn btn btn-success"
+                          value="false"
+                          onClick={(e) => {
+                            this.setLand(e);
+                          }}
+                        >
+                          False
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span className="card-text-label">Selected Filters ---</span>
+              </div>
+              <div>
+                <span className="card-text-label">Launch Year:</span>
+                <span className="card-text-value">{yearFilter}</span>
+              </div>
+              <div>
+                <span className="card-text-label">Successful Launch:</span>
+                <span className="card-text-value">{launchFilter}</span>
+              </div>
+              <div>
+                <span className="card-text-label">Successful Land:</span>
+                <span className="card-text-value">{landFilter}</span>
+              </div>
             </div>
-          </React.Fragment>
-        </section>
+          </div>
+          <section className="col-lg-9">
+            <React.Fragment>
+              <div class="container-fluid">
+                <div className="card-row row">
+                  {programList.length > 0 &&
+                    programList.map((row, index) => {
+                      return (
+                        <div className="card-base" key={index}>
+                          <div className="card h-100">
+                            <div className="img-div">
+                              <img
+                                className="card-img-top"
+                                src={row.links.mission_patch_small}
+                                alt="Card cap"
+                              />
+                            </div>
+                            <div className="card-block">
+                              <p className="card-title">
+                                {row.mission_name + " #" + row.flight_number}
+                              </p>
+                              <p className="card-text">
+                                <span className="card-text-label">
+                                  Mission Ids:
+                                </span>
+                                {this.displayNames(row.mission_id)}
+                              </p>
+                              <p className="card-text">
+                                <span className="card-text-label">
+                                  Launch Year:
+                                </span>
+                                <span className="card-text-value">
+                                  {row.launch_year}
+                                </span>
+                              </p>
+                              <p className="card-text">
+                                <span className="card-text-label">
+                                  Successful Launch:
+                                </span>
+                                <span className="card-text-value">
+                                  {row.launch_success !== null &&
+                                    row.launch_success.toString()}
+                                </span>
+                              </p>
+                              <p className="card-text">
+                                <span className="card-text-label">
+                                  Successful Landing:
+                                </span>
+                                <span className="card-text-value">
+                                  {row.launch_landing &&
+                                    row.launch_landing.toString()}
+                                </span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+            </React.Fragment>
+          </section>
+        </div>
       </div>
     );
   }
