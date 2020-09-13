@@ -107,7 +107,7 @@ class Body extends Component {
     const { programList, yearFilter, landFilter, launchFilter } = this.state;
 
     return (
-      <div className="app-conatiner row">
+      <div className="app-container row">
         <div className="filter col-lg-3">
           <div className="filterCard card">
             <div className="filterCard-body card-body">
@@ -116,6 +116,13 @@ class Body extends Component {
                 <button
                   type="button"
                   className="resetButton btn btn-link"
+                  disabled={
+                    yearFilter === "" &&
+                    launchFilter === "" &&
+                    landFilter === ""
+                      ? true
+                      : false
+                  }
                   onClick={(e) => {
                     this.resetFilter();
                   }}
@@ -500,6 +507,9 @@ class Body extends Component {
             </div>
           </div>
           <div>
+            <span className="card-text-label">Selected Filters---</span>
+          </div>
+          <div>
             <span className="card-text-label">Launch Year:</span>
             <span className="card-text-value">{yearFilter}</span>
           </div>
@@ -518,7 +528,7 @@ class Body extends Component {
               {programList.length > 0 &&
                 programList.map((row, index) => {
                   return (
-                    <div className="card-base col-md-6 col-lg-3" key={index}>
+                    <div className="card-base" key={index}>
                       <div className="card h-100">
                         <div className="img-div">
                           <img
