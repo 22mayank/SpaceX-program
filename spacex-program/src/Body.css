@@ -136,15 +136,19 @@
   border-color: #b1db9a !important;
 }
 
+.buttonHide{
+  visibility: hidden;
+}
+
 .yearBtn:focus {
   background-color: #218838 !important;
   border-color: #1e7e34 !important;
 }
 
-.yearToolbarLast {
+/* .yearToolbarLast {
   justify-content: flex-start !important;
   margin-left: 15% !important;
-}
+} */
 
 .successFilter {
   margin-top: 1.5rem;

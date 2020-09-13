@@ -401,7 +401,7 @@ class Body extends Component {
                     </div>
                   </div>
                   <div
-                    className="yearToolbarLast btn-toolbar"
+                    className="yearToolbar btn-toolbar"
                     role="toolbar"
                     aria-label="Toolbar with button groups"
                   >
@@ -419,6 +419,22 @@ class Body extends Component {
                         }}
                       >
                         2020
+                      </button>
+                    </div>
+                    <div
+                      className="btn-group mr-2 buttonHide"
+                      role="group"
+                      aria-label="Second group"
+                    >
+                      <button
+                        type="button"
+                        className="yearBtn btn btn-success"
+                        value="2019"
+                        onClick={(e) => {
+                          this.setYear(e);
+                        }}
+                      >
+                        2021
                       </button>
                     </div>
                   </div>
