@@ -19,8 +19,8 @@ All the selected filters can be viewed at the bottom of **Filters** card.
 **The layout of the application based on devices are as follow:**
 
 - Mobile View: Only one column until 700px.
-- Tablet View: Two columns until 992px .
-- Desktop View: Four columns.
+- Tablet View: Two columns until 1024px .
+- Desktop View: Four columns from 1025px.
 
 
 # Usage
@@ -31,10 +31,24 @@ git clone URL
 2. `cd` into the repository folder
 ```shell
 npm install --save
-npm start
 ```
 
-3. Open the index.html file using modern web browser or launch using live server in VSCode.
+3. For rendering server side: 
+`cd` into the server folder
+```shell
+npm install --save
+```
+`cd..` into the repository folder
+```shell
+npm run build
+```
+copy the build folder into server folder: 
+`cd` into the server folder
+```shell
+node server.js
+```
+
+4. Open the index.html file using modern web browser or launch using live server in VSCode.
 
 # App Performance
 ![Desktop App Performance](https://github.com/22mayank/SpaceX-program/blob/master/spacex-program/src/images/Desktop-Analysis.png)
